@@ -18,6 +18,7 @@ bot.onText(/\/start/, (msg) => {
         `hello ${msg.chat.first_name}, welcome...\n
         click /menu to main menu`
     );   
+    state = 0;
 });
 
 bot.onText(/\/menu/, (msg) => { 
