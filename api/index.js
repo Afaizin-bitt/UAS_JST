@@ -27,8 +27,9 @@ bot.onText(/\/predict/, (msg) => {
         msg.chat.id,
         `masukkan nilai x1|x2|x3 Contohnya 4|4|4`
     ); 
-    state = 1;
+    
 });
+     state = 1;
 bot.on('message', (msg) => {
     if(state == 1){
         s = msg.text.split("|");
