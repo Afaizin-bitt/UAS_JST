@@ -16,7 +16,7 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
-        click /menu to main menu`
+        click /predict to predict`
     );   
     state = 0;
 });
@@ -27,9 +27,9 @@ bot.onText(/\/predict/, (msg) => {
         msg.chat.id,
         `masukkan nilai x1|x2|x3 Contohnya 4|4|4`
     ); 
-    
+    state = 1;
 });
-     state = 1;
+     
 bot.on('message', (msg) => {
     if(state == 1){
         s = msg.text.split("|");
@@ -57,7 +57,7 @@ bot.on('message', (msg) => {
                      );
                         
             })
-  
+    state = 1;
     }else{
        bot.sendMessage(
                msg.chat.id,
