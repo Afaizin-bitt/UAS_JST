@@ -57,16 +57,9 @@ bot.on('message', (msg) => {
                      );
                         
             })
+      }
     state = 1;
-    }else{
-       bot.sendMessage(
-               msg.chat.id,
-               `please Click /start`
-               );
-            state = 0;
-    }
 })
-// routers
 
 // routers
 r.get('/predict/:x1/:x2/:x3', function(req, res, next) {    
